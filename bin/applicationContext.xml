@@ -9,6 +9,18 @@
     
 <!-- Define your beans here -->
 
+<bean id="tCoach"
+ 		class="com.justin.springdemo.TrackCoach">	 		
+</bean>
+
+<bean id="bCoach"
+ 		class="com.justin.springdemo.BaseballCoach">	 		
+</bean>
+
+<bean id="sCoach"
+ 		class="com.justin.springdemo.SoccerCoach">	 		
+</bean>
+
 <!--     Logger -->
 <bean id="myLoggerConfig" class="com.justin.springdemo.MyLoggerConfig" init-method="initLogger">
 	<property name="rootLoggerLevel" value="FINE" />
