@@ -1,6 +1,12 @@
 package com.justin.springdemo;
 
 public class TrackCoach implements Coach {
+	
+	private FortuneService fs;
+	
+	public TrackCoach(FortuneService fs) {
+		this.fs = fs;
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -14,7 +20,8 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return null;
+		return fs.getFortune();
 	}
+	
 
 }

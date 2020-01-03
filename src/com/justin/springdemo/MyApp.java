@@ -18,6 +18,9 @@ public class MyApp {
 		System.out.println(trackCoach.getCoachName() + "'s routine: " + trackCoach.getDailyWorkout());
 		System.out.println(soccerCoach.getCoachName() + "'s routine: " + soccerCoach.getDailyWorkout());
 		
+		System.out.println(trackCoach.getCoachName() + "'s fortune: " + trackCoach.getDailyFortune());
+		System.out.println(baseballCoach.getCoachName() + "'s fortune: " + baseballCoach.getDailyFortune());
+		
 		context.close();
 	}
 

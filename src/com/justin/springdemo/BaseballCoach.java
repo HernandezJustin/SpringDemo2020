@@ -1,6 +1,8 @@
 package com.justin.springdemo;
 
 public class BaseballCoach implements Coach {
+	
+	private FortuneService fs;
 
 	@Override
 	public String getDailyWorkout() {
@@ -14,7 +16,11 @@ public class BaseballCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return null;
+		return fs.getFortune();
+	}
+	
+	public void setFortuneService(FortuneService fs) {
+		this.fs = fs;
 	}
 
 }
