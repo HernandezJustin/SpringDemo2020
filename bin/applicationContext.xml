@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+<!-- Load properties file from classpath -->
+<context:property-placeholder location="classpath:sport.properties"/>
+    
 <!-- Define your beans here -->
 
 <bean id="fortuneService"
@@ -28,7 +31,10 @@
 </bean>
 
 <bean id="sCoach"
- 		class="com.justin.springdemo.SoccerCoach">	 		
+ 		class="com.justin.springdemo.SoccerCoach">
+ 		
+ 		<property name="team" value="${soccerCoach.team}"/>
+ 		<property name="email" value="${soccerCoach.email}"/>	 		
 </bean>
 
 <!--     Logger -->

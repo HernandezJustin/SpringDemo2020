@@ -11,7 +11,7 @@ public class MyApp {
 		//Create objects from XML bean definitions
 		Coach baseballCoach = context.getBean("bCoach", Coach.class);
 		Coach trackCoach = context.getBean("tCoach", Coach.class);
-		Coach soccerCoach = context.getBean("sCoach", Coach.class);
+		SoccerCoach soccerCoach = context.getBean("sCoach", SoccerCoach.class);
 		
 		//Methods and output
 		System.out.println(baseballCoach.getCoachName() + "'s routine: " + baseballCoach.getDailyWorkout());
@@ -20,6 +20,7 @@ public class MyApp {
 		
 		System.out.println(trackCoach.getCoachName() + "'s fortune: " + trackCoach.getDailyFortune());
 		System.out.println(baseballCoach.getCoachName() + "'s fortune: " + baseballCoach.getDailyFortune());
+		System.out.println(soccerCoach.giveIntroduction());
 		
 		context.close();
 	}
