@@ -23,5 +23,11 @@ public class TrackCoach implements Coach {
 		return fs.getFortune();
 	}
 	
-
+	public void startupInit() {
+		System.out.println("Init called");
+	}
+	
+	public void deInit() {
+		System.out.println("Destroy called");
+	}
 }

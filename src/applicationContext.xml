@@ -17,14 +17,21 @@
 </bean>
 
 <bean id="tCoach"
- 		class="com.justin.springdemo.TrackCoach">
+ 		class="com.justin.springdemo.TrackCoach"
+ 		init-method="startupInit"
+		destroy-method="deInit"
+ 		>
  		
 <!--  		constructor injection -->
  	<constructor-arg ref="fortuneService"/>	 		
 </bean>
 
+<!-- This bean will have a prototype scope (singleton is default - sharing reference to 1 memory location) -->
+<!-- Note: Prototype scoped beans cannot invoke a destroy method like singleton scoped beans -->
 <bean id="bCoach"
- 		class="com.justin.springdemo.BaseballCoach">	 	
+ 		class="com.justin.springdemo.BaseballCoach"
+ 		scope="prototype"
+ 		>	 	
  		
 <!--  		setter injection	 -->
 	<property name="fortuneService" ref="fortuneService"/>
